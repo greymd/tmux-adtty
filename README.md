@@ -1,6 +1,6 @@
 # tmux-adtty
 
-ADjust + TTY: Help to send commands to adjust terminal emulator's column and line size.
+ADjust + TTY: Adjust terminal emulator's size to true column and line size.
 
 <p align="center">
 <img src="./img/introduction.png" />
@@ -8,8 +8,8 @@ ADjust + TTY: Help to send commands to adjust terminal emulator's column and lin
 
 # Introduction
 
-When a remote terminal device cannot receives your local's terminal emulator's screen size, the layout would be broken.
-If any servers does not convey a terminal information in ssh connection, this the issue can be happened. This plugin helps tmux users to fix such the issue.
+When a remote terminal device cannot receives local's terminal emulator's screen size, screen layout would be broken.
+If any servers does not convey terminal information in SSH connection, such the issue can be happened. This plugin helps tmux users fix such the issue.
 
 ## Key binding
 
