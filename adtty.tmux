@@ -19,7 +19,7 @@ get_tmux_option() {
 
 main() {
     local key_bindings=$(get_tmux_option "$adjust_option" "$default_adjust_key")
-    bind "$key_bindings" run-shell "$_ADTTY_EXECUTION"
+    tmux bind "$key_bindings" run-shell "$_ADTTY_EXECUTION"
 }
 
 main
