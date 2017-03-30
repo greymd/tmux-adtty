@@ -2,6 +2,10 @@
 
 ADjust + TTY: Help to send commands to adjust terminal emulator's column and line size.
 
+<p align="center">
+<img src="./img/introduction.png" />
+</p>
+
 ## Key binding
 
 * `prefix + a` - Adjust terminal emulator's column and line size properly.
