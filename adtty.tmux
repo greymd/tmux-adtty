@@ -4,8 +4,10 @@ _ADTTY_CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 _ADTTY_EXECUTION="bash $_ADTTY_CURRENT_DIR/scripts/adjust.sh"
 
 default_adjust_key="a"
-adjust_option="@adjust"
+adjust_option="@adtty"
 
+# Came from helper.sh
+# link: https://github.com/tmux-plugins/tmux-yank/blob/master/scripts/helpers.sh
 get_tmux_option() {
     local option="$1"
     local default_value="$2"
@@ -19,7 +21,10 @@ get_tmux_option() {
 
 main() {
     local key_bindings=$(get_tmux_option "$adjust_option" "$default_adjust_key")
-    tmux bind "$key_bindings" run-shell "$_ADTTY_EXECUTION"
+    for key in $key_bindings; do
+        tmux bind-key "$key_bindings" run-shell "$_ADTTY_EXECUTION"
+    done
+
 }
 
 main
